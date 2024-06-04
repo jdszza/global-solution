@@ -23,7 +23,11 @@ temperatura_agua = []
 velocidade_vento = []
 critico = 0
 
-num_leituras = int(input("(ATENÇÃO: INSIRA UM NÚMERO MAIOR QUE 1) \n Quantas leituras serão realizadas?"))
+num_leituras = int(input("Quantas leituras serão realizadas?"))
+while num_leituras < 2:
+    print()
+    print("O número de leituras deve ser 2 ou mais. Por favor, insira novamente.")
+    num_leituras = int(input("Quantas leituras serão realizadas?"))
 print()
 
 for cont in range(num_leituras):
