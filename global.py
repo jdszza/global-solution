@@ -23,19 +23,18 @@ temperatura_agua = []
 velocidade_vento = []
 critico = 0
 
-num_leituras = int(input("Quantas leituras serão realizadas?"))
+num_leituras = int(input("Quantas leituras serão realizadas? "))
 while num_leituras < 2:
     print()
     print("O número de leituras deve ser 2 ou mais. Por favor, insira novamente.")
-    num_leituras = int(input("Quantas leituras serão realizadas?"))
+    num_leituras = int(input("Quantas leituras serão realizadas? "))
 print()
 
 for cont in range(num_leituras):
     print(f"Insira os dados para a {cont+1}º leitura")
-    print()
-    nivel_mar.append(float(input("Informe o nível do mar em metros:")))
-    temperatura_agua.append(float(input("Informe a temperatura da água em °C:")))
-    velocidade_vento.append(float(input("Informe a velocidade do vento em Km/h:")))
+    nivel_mar.append(float(input("Informe o nível do mar em metros: ")))
+    temperatura_agua.append(float(input("Informe a temperatura da água em °C: ")))
+    velocidade_vento.append(float(input("Informe a velocidade do vento em Km/h: ")))
     print()
     if nivel_mar[cont] > 3.0:
         print("Alerta: Condições críticas detectadas!")
@@ -57,6 +56,8 @@ for cont in range(num_leituras):
 # Calcule e exiba a média e o desvio padrão para os valores das leituras do nível do mar, temperatura da água e velocidade do vento.
 
 # MÉDIAS ----------------------------------------------------------------
+
+print("MÉDIAS")
 
 # Média do Nível do Mar
 soma_mar = 0
@@ -90,6 +91,8 @@ print()
 
 
 # DESVIO PADRÃO -------------------------------------------------------------------------------------------------
+
+print("DESVIO PADRÃO")
 
 # Cálculo das diferenças e quadrados das diferenças
 diferencas_mar = [(x - media_mar) ** 2 for x in nivel_mar]
@@ -137,6 +140,8 @@ print()
 # Se mais de 50% das leituras indicarem condições críticas, exiba "Estado Geral: Crítico".
 # Caso contrário, exiba "Estado Geral: Estável".
 
+print("ESTADO GERAL")
+
 porc_critico = critico/num_leituras
 
 if porc_critico >= 0.5:
@@ -149,7 +154,9 @@ else:
 
 # Determine e exiba a leitura máxima e mínima para cada parâmetro (nível do mar, temperatura da água e velocidade do vento).
 
-print()
+
+
+print("PARÂMETROS MÁXIMOS")
 
 maximo_mar = max(nivel_mar)
 print(f"O nível do mar máximo inserido foi de: {maximo_mar} metros")
@@ -160,6 +167,8 @@ print(f"O grau de temperatura máximo inserido foi de: {maximo_temperatura}°C")
 maximo_vento = max(velocidade_vento)
 print(f"A velocidade do vento máxima inserida foi de: {maximo_vento}Km/h")
 print()
+
+print("PARÂMETROS MÍNIMOS")
 
 minimo_mar = min(nivel_mar)
 print(f"O nível do mar mínimo inserido foi de: {minimo_mar} metros")
@@ -174,6 +183,8 @@ print()
 
 
 # Determine a tendência dos dados (aumentando, diminuindo ou estável) para cada parâmetro
+
+print("TÊNDENCIAS")
 
 # Nível do Mar
 aumento_mar = 0
