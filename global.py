@@ -152,23 +152,23 @@ else:
 print()
 
 maximo_mar = max(nivel_mar)
-print(f"O nível do mar máximo inserido foi de: {maximo_mar}")
+print(f"O nível do mar máximo inserido foi de: {maximo_mar} metros")
 
 maximo_temperatura = max(temperatura_agua)
-print(f"O grau de temperatura máximo inserido foi de: {maximo_temperatura}")
+print(f"O grau de temperatura máximo inserido foi de: {maximo_temperatura}°C")
 
 maximo_vento = max(velocidade_vento)
-print(f"A velocidade do vento máxima inserida foi de: {maximo_vento}")
+print(f"A velocidade do vento máxima inserida foi de: {maximo_vento}Km/h")
 print()
 
 minimo_mar = min(nivel_mar)
-print(f"O nível do mar mínimo inserido foi de: {minimo_mar}")
+print(f"O nível do mar mínimo inserido foi de: {minimo_mar} metros")
 
 minimo_temperatura = min(temperatura_agua)
-print(f"O grau de temperatura mínimo inserido foi de: {minimo_temperatura}")
+print(f"O grau de temperatura mínimo inserido foi de: {minimo_temperatura}°C")
 
 minimo_vento = min(velocidade_vento)
-print(f"A velocidade do vento mínima inserida foi de: {minimo_vento}")
+print(f"A velocidade do vento mínima inserida foi de: {minimo_vento}Km/h")
 print()
 
 
