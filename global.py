@@ -23,7 +23,8 @@ temperatura_agua = []
 velocidade_vento = []
 critico = 0
 
-num_leituras = int(input("Quantas leituras serão realizadas?"))
+num_leituras = int(input("(ATENÇÃO: INSIRA UM NÚMERO MAIOR QUE 1) \n Quantas leituras serão realizadas?"))
+print()
 
 for cont in range(num_leituras):
     print(f"Insira os dados para a {cont+1}º leitura")
@@ -49,8 +50,6 @@ for cont in range(num_leituras):
         print()
 
 
-print()
-
 # Calcule e exiba a média e o desvio padrão para os valores das leituras do nível do mar, temperatura da água e velocidade do vento.
 
 # MÉDIAS ----------------------------------------------------------------
@@ -62,7 +61,7 @@ for i in nivel_mar:
     
 media_mar = soma_mar/num_leituras
 print(f"O nível médio do mar é de {media_mar:.2f} metros.")
-print()
+
 
 
 # Média da Temperatura da Água
@@ -72,7 +71,6 @@ for i in temperatura_agua:
     
 media_agua = soma_agua/num_leituras
 print(f"A temperatura média da água é de {media_agua:.2f}°C")
-print()
 
 
 # Média da Velocidade do Vento
@@ -83,7 +81,7 @@ for i in velocidade_vento:
 media_vento = soma_vento/num_leituras
 print(f"A velocidade média do vento é de {media_vento:.2f}Km/h")
 print()
-print()
+
 
 
 
@@ -125,11 +123,11 @@ desvio_padrao_vento = variacao_vento ** 0.5
 
 # Exibição dos resultados
 print(f"Desvio padrão do nível do mar: {desvio_padrao_mar:.2f} metros")
-print()
+
 print(f"Desvio padrão da temperatura da água: {desvio_padrao_agua:.2f}°C")
-print()
+
 print(f"Desvio padrão da velocidade do vento: {desvio_padrao_vento:.2f} Km/h")
-print()
+
 print()
 
 # Se mais de 50% das leituras indicarem condições críticas, exiba "Estado Geral: Crítico".
@@ -151,24 +149,24 @@ print()
 
 maximo_mar = max(nivel_mar)
 print(f"O nível do mar máximo inserido foi de: {maximo_mar}")
-print()
+
 maximo_temperatura = max(temperatura_agua)
 print(f"O grau de temperatura máximo inserido foi de: {maximo_temperatura}")
-print()
+
 maximo_vento = max(velocidade_vento)
 print(f"A velocidade do vento máxima inserida foi de: {maximo_vento}")
 print()
 
 minimo_mar = min(nivel_mar)
 print(f"O nível do mar mínimo inserido foi de: {minimo_mar}")
-print()
+
 minimo_temperatura = min(temperatura_agua)
 print(f"O grau de temperatura mínimo inserido foi de: {minimo_temperatura}")
-print()
+
 minimo_vento = min(velocidade_vento)
 print(f"A velocidade do vento mínima inserida foi de: {minimo_vento}")
 print()
-print()
+
 
 
 # Determine a tendência dos dados (aumentando, diminuindo ou estável) para cada parâmetro
@@ -222,9 +220,9 @@ elif diminuicao_vento > aumento_vento:
 
 # Exibir as tendências
 print(f"Tendência do nível do mar: {tendencia_mar}")
-print()
+
 print(f"Tendência da temperatura da água: {tendencia_agua}")
-print()
+
 print(f"Tendência da velocidade do vento: {tendencia_vento}")
 print()
 
